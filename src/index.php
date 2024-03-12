@@ -9,7 +9,7 @@ DB_PASSWORD: Contraseña del usuario e la BD
 include_once("config.php");
 
 //Consulta de selección. Selecciona todos los usuarios ordenados de manera descendente por el campo id
-$result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
+$result = mysqli_query($mysqli, "SELECT * FROM futbol ORDER BY puntos DESC");
 
 ?>
 
@@ -29,7 +29,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
 -->	
 <div>
 	<header>
-		<h1>Panel de Control</h1>
+		<h1>LALIGA</h1>
 	</header>
 
 	<main>
@@ -37,13 +37,15 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
 		<li><a href="index.php">Inicio</a></li>
 		<li><a href="add.html">Alta</a></li>
 	</ul>
-	<h2>Listado de trabajador@s</h2>
+	<h2>Listado de Equipos de LaLiga</h2>
 	<table border="1">
 	<thead>
 		<tr>
-			<th>Nombre</th>
-			<th>Apellido</th>
-			<th>Edad</th>
+			<th>Equipo</th>
+			<th>Ciudad</th>
+			<th>Puntos</th>
+			<th>PJ</th>
+			<th>PG</th>
 			<th>Acciones</th>
 		</tr>
 	</thead>
@@ -64,9 +66,11 @@ $res["age"] = "23";
 //Genera la tabla de la página inicial
 	while($res = mysqli_fetch_array($result)) {
 		echo "<tr>\n";
-		echo "<td>".$res['name']."</td>\n";
-		echo "<td>".$res['surname']."</td>\n";
-		echo "<td>".$res['age']."</td>\n";
+		echo "<td>".$res['equipo']."</td>\n";
+		echo "<td>".$res['ciudad']."</td>\n";
+		echo "<td>".$res['puntos']."</td>\n";
+		echo "<td>".$res['pj']."</td>\n";
+		echo "<td>".$res['pg']."</td>\n";
 		echo "<td>";
 //En la última columna se añader dos enlaces para editar y modificar el registro correspondiente. Se le pasa por el método GET el id del registro		
 		echo "<a href=\"edit.php?id=$res[id]\">Editar</a>\n";
@@ -81,7 +85,7 @@ $res["age"] = "23";
 	</table>
 	</main>
 	<footer>
-    Created by the IES Miguel Herrero team &copy; 2024
+    Created by David Pelaez &copy; 2024
   	</footer>
 </div>
 </body>

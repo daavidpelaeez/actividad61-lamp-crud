@@ -3,7 +3,7 @@
 include("config.php");
 
 /*Obtiene el id del datos a eliminar a partir de la URL. Transacción de datos utilizando el método: GET
-Recuerda que existen dos métodos con los que el navegador puede enviar información al servidor:
+Recuerda que   existen dos métodos con los que el navegador puede enviar información al servidor:
 1.- Método HTTP GET. Información se envía de forma visible. A través de la URL (header HTTP Request )
 En PHP los datos se administran con el array asociativo $_GET.
 2.- Método HTTP POST. Información se envía de forma no visible. A través del cuerpo del HTTP Request 
@@ -12,7 +12,7 @@ PHP proporciona el array asociativo $_POST para acceder a la información enviad
 $id = $_GET['id'];
 
 //Prepara una sentencia SQL para su ejecución. En este caso el borrado de un registro de la BD.
-$stmt = mysqli_prepare($mysqli, "DELETE FROM users WHERE id=?");
+$stmt = mysqli_prepare($mysqli, "DELETE FROM futbol WHERE id=?");
 /*Enlaza variables como parámetros a una setencia preparada. 
 i: La variable correspondiente tiene tipo entero
 d: La variable correspondiente tiene tipo doble
