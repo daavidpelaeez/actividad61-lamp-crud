@@ -4,7 +4,7 @@ CREATE TABLE futbol (
   ciudad VARCHAR(100) NOT NULL,
   puntos INT  NOT NULL,
   pj INT  NOT NULL,
-  pg INT  NOT NULL,
+  pg INT  NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO futbol (equipo, ciudad, puntos, pj, pg) VALUES('Las Palmas', 'Las Palmas', 51, 17, 17);
