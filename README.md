@@ -4,6 +4,7 @@
 >Módulo: IAW - Implantación de Aplicaciones Web  
 >Ciclo: CFGS Administración de Sistemas Informáticos en Red  
 >Alumno: David Pelaez Rugama
+
 >Descripcion de la tarea: En esta tarea hemos realizado el levantamiento de un escenario combinando PHP,MARIADB,APACHE en el cual tenemos una tabla con los equipos de _LaLiga_ y podemos modificar,agregar o eliminar campos a nuestro gusto. 
 
 | Elemento                                  | Descripción                                                               |
