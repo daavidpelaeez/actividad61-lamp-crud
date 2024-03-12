@@ -1,0 +1,36 @@
+version: '3'
+
+services: 
+  apache:
+    image: lumigv/lamp-crud-app:1.0
+    ports: 
+      - 80:80
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: mariadb
+    ports:
+      - 3306:3306
+    environment: 
+      - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+      - MARIADB_DATABASE=${MARIADB_DATABASE}
+      - MARIADB_USER=${MARIADB_USER}
+      - MARIADB_PASSWORD=${MARIADB_PASSWORD}
+      - LANG=C.UTF-8
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d 
+    restart: always
+  
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+      - PMA_HOST=mariadb
+    depends_on: 
+      - mariadb
+volumes:
+  mariadb_data:
+  
