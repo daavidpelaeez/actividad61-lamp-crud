@@ -19,5 +19,5 @@
 |Archivo 000-default.conf                  | Es un archivo de configuración utilizado por el servidor web Apache.      |
 | Archivo de configuración sitio web       | Archivo de configuración del sitio web por defecto en Apache.             |
 
-Recuerda que el escenario con un modelo de aplicación PHP CRUD donde debes realizar los cambios pedidos y realizar las correspondientes pruebas según se indica en la Actividad 6.1 lo tienes en el siguiente repositorio: [crud-php](https://github.com/lumigv/crud-php)
+*Link Directo a mi imagen en DockerHub* ----> https://hub.docker.com/r/davidpelaez21/actividad61-lamp-crud
 
